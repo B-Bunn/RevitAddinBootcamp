@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevitAddinBootcamp.Methods
+namespace RevitAddinBootcamp
 {
-    public class DataCollectors
+    public class DataCollector
     {
         internal static WallType GetWallTypeByName(Document doc, string typeName)
         {

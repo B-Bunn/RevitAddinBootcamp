@@ -52,8 +52,8 @@ namespace RevitAddinBootcamp
 
                     if (curveGS != null)
                     {
-                        WallType wallType1 = GetWallTypeByName(doc, "Storefront");
-                        WallType wallType2 = GetWallTypeByName(doc, "Exterior - Brick on CMU");
+                        WallType wallType1 = DataCollector.GetWallTypeByName(doc, "Storefront");
+                        WallType wallType2 = DataCollector.GetWallTypeByName(doc, "Exterior - Brick on CMU");
                         DuctType ductType = GetDuctByName(doc, "Default");
                         PipeType pipeType = GetPipeByName(doc, "Default");
 
@@ -115,20 +115,7 @@ namespace RevitAddinBootcamp
             return myButtonData.Data;
         }
 
-        internal WallType GetWallTypeByName(Document doc, string typeName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(WallType));
-
-            foreach (WallType curType in collector)
-            {
-                if (curType.Name == typeName)
-                    return curType;
-            }
-
-            return null;
-        }
-
+        
         internal DuctType GetDuctByName(Document doc, string typeName)
         {
             FilteredElementCollector ductCollector = new FilteredElementCollector(doc);
