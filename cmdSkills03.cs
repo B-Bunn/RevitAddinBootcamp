@@ -1,4 +1,6 @@
 ﻿using Autodesk.Revit.DB.Architecture;
+using Autodesk.Revit.DB.Structure;
+using RevitAddinBootcamp.Common;
 
 namespace RevitAddinBootcamp
 {
@@ -52,7 +54,31 @@ namespace RevitAddinBootcamp
             LocationPoint roomLocPT = curRoom.Location as LocationPoint;
             XYZ roomPoint = roomLocPT.Point;
 
-            //TaskDialog.Show("Test", $"{roomLocPT.Point}, {roomLocation}");
+            TaskDialog.Show("Test", $"{roomLocPT.Point}");
+
+            using(Transaction t = new Transaction(doc))
+            {
+                t.Start("Insert Families Into Rooms");
+            FamilySymbol curFamSymbol = Utils.GetFamilySymbolByName(doc, "Desk", "Large");
+            curFamSymbol.Activate();
+
+            foreach(Room curRoom2 in roomCollector)
+            {
+                LocationPoint loc = curRoom2.Location as LocationPoint;
+
+                FamilyInstance curFamInstance = doc.Create.NewFamilyInstance(loc.Point, curFamSymbol, StructuralType.NonStructural);
+
+                string department = Utils.GetParameterValueAsString(curRoom2, "Department");
+
+                double area = Utils.GetParameterValueAsDouble(curRoom2, BuiltInParameter.ROOM_AREA);
+                    double area2 = Utils.GetParameterValueAsDouble(curRoom, "Area");
+
+                    Utils.SetParameterValue(curRoom2, "Department", "Architecture");
+
+                }
+                t.Commit();
+            }
+
 
             return Result.Succeeded;
         }

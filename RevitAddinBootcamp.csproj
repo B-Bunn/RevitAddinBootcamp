@@ -75,6 +75,7 @@
 	  <None Remove="Resources\Module02.png" />
 	  <None Remove="Resources\Module03.png" />
 	  <None Remove="Resources\Module04.png" />
+	  <None Remove="Resources\TestImage.bmp" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -82,9 +83,11 @@
 	  <EmbeddedResource Include="Resources\Module02.png" />
 	  <EmbeddedResource Include="Resources\Module03.png" />
 	  <EmbeddedResource Include="Resources\Module04.png" />
+	  <EmbeddedResource Include="Resources\TestImage.bmp" />
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
 	  <PackageReference Include="System.Drawing.Common" Version="8.0.3" IncludeAssets="build; compile" PrivateAssets="All" />
 	  <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
 	</ItemGroup>
@@ -95,6 +98,12 @@
 		<Copyright>2024</Copyright>
 		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
 	</PropertyGroup>
+	
+	<ItemGroup>
+	  <Reference Include="My1st">
+	    <HintPath>T:\BIM\Revit\Addins\Chaddins\My1st.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 	
 	<ItemGroup>
 	  <Compile Update="Properties\Resources.Designer.cs">

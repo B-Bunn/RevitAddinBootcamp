@@ -39,7 +39,7 @@ namespace RevitAddinBootcamp
                 // Get level
                 View curView = doc.ActiveView;
                 Parameter levelParam = curView.LookupParameter("Associated Level");
-                Parameter levelParam2 = curView.get_Parameter(BuiltInParameter.ASSOCIATED_LEVEL);
+                //Parameter levelParam2 = curView.get_Parameter(BuiltInParameter.ASSOCIATED_LEVEL);
                 string levelName = levelParam.AsString();
                 ElementId levelId = levelParam.AsElementId();
 
