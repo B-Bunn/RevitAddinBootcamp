@@ -133,6 +133,9 @@
 	  <None Update="RegisterAddin.addin">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
+	  <None Update="RevitAddinBootcamp.addin">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
   
 </Project>

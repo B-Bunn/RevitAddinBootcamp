@@ -15,9 +15,11 @@ namespace RevitAddinBootcamp
             string tabName = "MyTab";
             //application.CreateRibbonTab(tabName);
 
+            //testing this
+
             //1b safer creation
             try
-            {
+            {   
                 application.CreateRibbonTab(tabName);
             }
             catch (Exception error)
