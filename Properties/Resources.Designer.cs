@@ -73,6 +73,16 @@ namespace RevitAddinBootcamp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Module01small {
+            get {
+                object obj = ResourceManager.GetObject("Module01small", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Module02 {
             get {
                 object obj = ResourceManager.GetObject("Module02", resourceCulture);
@@ -106,6 +116,16 @@ namespace RevitAddinBootcamp.Properties {
         internal static byte[] TestImage {
             get {
                 object obj = ResourceManager.GetObject("TestImage", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] TestImagesmall {
+            get {
+                object obj = ResourceManager.GetObject("TestImagesmall", resourceCulture);
                 return ((byte[])(obj));
             }
         }

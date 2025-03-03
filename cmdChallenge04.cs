@@ -12,7 +12,7 @@
 
             // Your Module 04 Challenge code goes here
             // Delete the TaskDialog below and add your code
-            TaskDialog.Show("Module 04 Challenge", "Coming Soon!");
+            TaskDialog.Show("Module 04 Challenge", "is this updating!");
 
 
             return Result.Succeeded;

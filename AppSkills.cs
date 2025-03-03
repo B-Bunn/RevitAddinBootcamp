@@ -15,7 +15,6 @@ namespace RevitAddinBootcamp
             string tabName = "MyTab";
             //application.CreateRibbonTab(tabName);
 
-            //testing this
 
             //1b safer creation
             try
@@ -56,13 +55,38 @@ namespace RevitAddinBootcamp
 
             //5 add image
             buttonData1.LargeImage = ConvertToImageSource(Properties.Resources.TestImage);
-            //buttonData1.Image = ConvertToImageSource(Properties.Resources.TestImage);
+            buttonData1.Image = ConvertToImageSource(Properties.Resources.TestImagesmall);
             buttonData2.LargeImage = ConvertToImageSource(Properties.Resources.Module01);
-            //buttonData2.Image = ConvertToImageSource(Properties.Resources.Module01);
+            buttonData2.Image = ConvertToImageSource(Properties.Resources.Module01small);
 
             //6 create buttons
-            PushButton button1 = panel.AddItem(buttonData1) as PushButton;
-            PushButton button2 = panel.AddItem(buttonData2) as PushButton;
+            //PushButton button1 = panel.AddItem(buttonData1) as PushButton;
+            //PushButton button2 = panel.AddItem(buttonData2) as PushButton;
+
+            //7 Create Stacked Buttons
+            //panel.AddStackedItems(buttonData1, buttonData2);
+
+            //8 Split button
+            //SplitButtonData splitButtonData = new SplitButtonData("splitButton", "Split\rButton");
+            //SplitButton splitButton = panel.AddItem(splitButtonData) as SplitButton;
+            //splitButton.AddPushButton(buttonData1);
+            //splitButton.AddPushButton(buttonData2);
+
+            //10 other items
+            //this is the dropdown at the bottom of the panel
+            panel.AddSlideOut();
+
+            panel.AddSeparator();
+
+
+            //9 add pulldown button
+            PulldownButtonData pulldownButtonData = new PulldownButtonData("pullDownButton", "Pulldown\rButton");
+            pulldownButtonData.LargeImage = ConvertToImageSource(Properties.Resources.TestImage);
+
+            PulldownButton pullDownButton = panel.AddItem(pulldownButtonData) as PulldownButton;
+            pullDownButton.AddPushButton(buttonData1);
+            pullDownButton.AddPushButton(buttonData2);
+
 
 
 

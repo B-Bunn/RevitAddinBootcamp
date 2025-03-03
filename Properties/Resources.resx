@@ -121,6 +121,9 @@
   <data name="Module01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Module01.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Module01small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Module01small.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Module02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Module02.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -132,5 +135,8 @@
   </data>
   <data name="TestImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TestImage.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TestImagesmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TestImagesmall.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
